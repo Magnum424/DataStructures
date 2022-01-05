@@ -6,7 +6,8 @@ using namespace std;
 //Class definition
 class LinkedList{
 	private:
-		
+		Node* head;
+		int lenght;
 	public:
 		
 };
