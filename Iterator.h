@@ -6,7 +6,7 @@ using namespace std;
 class Iterator{
 	private:
 		const LinkedList &list;
-		Node* node;
+		Node<item>* node;
 	public:
 		//Iterator constructor
 		Iterator(const LinkedList &l):list(l),node(l.head){};
@@ -23,4 +23,4 @@ class Iterator{
 			node = node->getNext();
 		};
 };
-#endif ITERATOR_H_
+#endif /*ITERATOR_H_*/

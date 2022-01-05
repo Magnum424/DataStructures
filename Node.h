@@ -4,19 +4,20 @@
 #define UNDEFINED -9999
 using namespace std;
 
-template <typename obj>
+typedef int item;
+template <typename item>
 class Node{
 	private:
-		obj data;
+		item data;
 		Node* next;
 	public:
 		//Constructor
-		Node(obj _data, Node* _next = NULL):data(_data),next(_next){};
+		Node(item _data, Node* _next = NULL):data(_data),next(_next){};
 		//Getters-Setters
-		obj getData(){return data;};
+		item getData(){return data;};
 		Node* getNext(){return next;};
 		
-		void setData(obj _data){data = _data;};
+		void setData(item _data){data = _data;};
 		void setNext(Node* _next){next = _next;};
 		//Destructor
 		virtual ~Node(){};
