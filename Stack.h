@@ -7,7 +7,7 @@ using namespace std;
 //Class definition
 template <class X>
 class Stack{
-	//private:
+	private:
 		int top;
 		X* array;
 		int MAX;
@@ -40,14 +40,14 @@ class Stack{
 			}
 		};
 		//Read the value of the item at the top of the stack **
-		void topValue(){
+		X topValue(){
 			if(!isStackEmpty()){
-				cout << array[top] << endl;
+				return array[top];
 			}
 			else{
 				cout << "The stack is empty" <<endl;
 			}
-		}
+		};
 		//Add an item to the top of the stack **
 		void push(X item){
 			if(top+1 < MAX){
@@ -58,9 +58,32 @@ class Stack{
 				cout << "Overflow" << endl;
 			}
 		}
-		//Check if the stacks have the same items in the same order (==) (sequential)
-		//Check if the stacks have the same items in the same order (==) (recursive)	
+		//Check if the stacks have the same items in the same order (==) (sequential) **
+		bool isEqualSeq(Stack &p){
+			bool res = false;
+			if(this->isStackEmpty() || p.isStackEmpty()){
+				cout<< "One or both of the stacks are empty"<<endl;
+				return res;	
+			};
+			while(this->top != -1 || p.top != -1) {
+				if(this->topValue() == p.topValue()){
+					res = true;
+					this->pop();
+					p.pop();
+				}
+				else{
+					res = false;
+					return res;
+				}
+			};
+			return res;
+		};
+		//Check if the stacks have the same items in the same order (==) (recursive)
+		bool isEqualRec(Stack &p1, Stack &p2){
+			
+		};
 		//Stacking stack b over stack a (sequential)
+		
 		//Stacking stack b over stack a (recursive)
 };
 #endif /*STACK_H_*/

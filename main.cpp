@@ -22,16 +22,14 @@ int main(int argc, char** argv) {
 	cout << newList->getLenght() <<endl;
 	cout<<newList->getNodeData();
 	*/
-	//Driver Stack
-	Stack<int> p = Stack<int>(5);
-	cout<<p.isStackEmpty()<<endl;
-	p.topValue();
-	p.push(5);
-	cout<<p.isStackEmpty()<<endl;
-	p.topValue();
-	p.push(20);
-	p.topValue();
-	p.pop();
-	p.topValue();	
+	//Driver Stack -- Integer stack
+	Stack<int> p1 = Stack<int>(5);
+	Stack<int> p2 = Stack<int>(5);
+	p1.push(5);
+	p1.push(20);		
+	p2.push(5);
+	p2.push(20);
+	cout<< p1.isEqualSeq(p2);
+	cout<<p1.topValue();
 	return 0;
 }
