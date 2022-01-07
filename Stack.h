@@ -58,7 +58,7 @@ class Stack{
 				cout << "Overflow" << endl;
 			}
 		}
-		//Check if the stacks have the same items in the same order (==) (sequential) **
+		//Check if the stacks have the same items in the same order (==) (sequential) ** [Not an optimal solution]
 		bool isEqualSeq(Stack &p){
 			bool res = false;
 			if(this->isStackEmpty() || p.isStackEmpty()){
@@ -77,10 +77,6 @@ class Stack{
 				}
 			};
 			return res;
-		};
-		//Check if the stacks have the same items in the same order (==) (recursive)
-		bool isEqualRec(Stack &p1, Stack &p2){
-			
 		};
 		//Stacking stack b over stack a (sequential)
 		

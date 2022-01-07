@@ -30,6 +30,5 @@ int main(int argc, char** argv) {
 	p2.push(5);
 	p2.push(20);
 	cout<< p1.isEqualSeq(p2);
-	cout<<p1.topValue();
 	return 0;
 }
