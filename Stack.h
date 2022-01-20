@@ -78,8 +78,5 @@ class Stack{
 			};
 			return res;
 		};
-		//Stacking stack b over stack a (sequential)
-		
-		//Stacking stack b over stack a (recursive)
 };
 #endif /*STACK_H_*/
